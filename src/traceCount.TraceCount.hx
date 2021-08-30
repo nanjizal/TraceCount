@@ -1,5 +1,4 @@
 package traceCount;
-
 @:structInit
 class CodeLocation{
 	public var fileName: String;
@@ -31,8 +30,13 @@ class TraceCount{
       {
 					exists = true;
         	if( v.count < counting ){
-						trace( d );
+	    var methodName = pos.methodName;
+            var lineNumber = pos.lineNumber;
+            var className = pos.className;	
+            trace( '($className:$methodName:$lineNumber) $d' );
             v.count++;
+          } else {
+						
           }
         break;
       }
