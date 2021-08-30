@@ -19,3 +19,5 @@ class Test {
   }
 }
 ```
+example use
+https://try.haxe.org/#6C50EF01
