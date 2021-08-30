@@ -1,0 +1,12 @@
+{
+  "name"         : "traceCount",
+  "url"          : "https://github.com/nanjizal/TraceCount",
+  "license"      : "MIT",
+  "tags"         : ["cross"],
+  "description"  : "Simple class to trace a value a limited number of times",
+  "version"      : "0.0.1-alpha",
+  "releasenote"  : "See https://github.com/nanjizal/TraceCount/blob/master/readme.md",
+  "classPath"    : "src",
+  "contributors" : ["Nanjizal"],
+  "dependencies" : {}
+}
