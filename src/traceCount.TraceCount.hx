@@ -6,7 +6,7 @@ class CodeLocation{
 	public var count: Int;
   public function new( fileName: String, lineNumber: Int
                       , count: Int ){
-		this.fileName   = fileName;
+	this.fileName   = fileName;
     this.lineNumber = lineNumber;
     this.count      = count;
   }
@@ -30,11 +30,11 @@ class TraceCount{
       {
 					exists = true;
         	if( v.count < counting ){
-	    var methodName = pos.methodName;
-            var lineNumber = pos.lineNumber;
-            var className = pos.className;	
-            trace( '($className:$methodName:$lineNumber) $d' );
-            v.count++;
+	            var methodName = pos.methodName;
+                var lineNumber = pos.lineNumber;
+                var className  = pos.className;	
+                trace( '($className:$methodName:$lineNumber) $d' );
+                v.count++;
           } else {
 						
           }
