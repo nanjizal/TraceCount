@@ -1,0 +1,13 @@
+-cp src
+-js example.js
+-lib htmlHelper
+
+
+-main Example.hx
+-D js-flatten 
+-dce full
+--next
+
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="example.js"></script></body></html>' >example.html
+# open html on mac os.
+-cmd open example.html

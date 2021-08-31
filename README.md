@@ -1,23 +1,47 @@
 # TraceCount
-Provides a simple way to trace a value a limited number of times, for instance if debugging a line of code that runs lots of times you don't want the overhead of visual trace for every occurance, just enough to check it's running and a value.
+Allows a particular trace statement to output only a limited number of times, this is useful to  help with debugging when you want to avoid swapping your browser with traces when the statement is within a loop, or when a tracing over a large number of elements. Tracing out a limited number of values is often enough without the browser getting into a blocked wait situation, as tracing is heavy.
 
+## Example use
+This example uses htmlHelper to trace the example to the screen, but **DivertTrace** is not need.
+
+Example.hx
 ```haxe
+package;
 import traceCount.TraceCount;
-class Test {
-  static function main() {
-    new Test();
-  }
-  var testCount = 0;
-  public function new(){
-  	var timer = new haxe.Timer(100);
-    timer.run = test;
-  }
-  public function test(){
-		TraceCount.trace( 'show 10 times: ' + testCount, 10 );
-    TraceCount.trace( 'show 5 times: ' + testCount, 5 );
-    testCount++;
-  }
+import htmlHelper.tools.DivertTrace;
+function main(){
+    var timer = new haxe.Timer(100);
+    var testCount = 0;
+    var divertTrace = new DivertTrace();
+    timer.run = function(){
+        TraceCount.trace( 'show 10 times: ' + testCount, 10 );
+        testCount++;
+    }
 }
 ```
-example use
+
+```
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 0
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 1
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 2
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 3
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 4
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 5
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 6
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 7
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 8
+traceCount.TraceCount.trace ( 35 )
+- (_Example.Example_Fields_:main:9) show 10 times: 9
+````
+
+Try haxe standalone example
 https://try.haxe.org/#6C50EF01
