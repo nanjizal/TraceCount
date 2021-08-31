@@ -1,9 +1,9 @@
 package traceCount;
 @:structInit
 class CodeLocation{
-    public var fileName: String;
+    public var fileName:   String;
     public var lineNumber: Int;
-    public var count: Int;
+    public var count:      Int;
     public function new( fileName: String, lineNumber: Int
                        , count: Int ){
         this.fileName   = fileName;
