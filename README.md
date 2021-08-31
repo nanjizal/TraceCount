@@ -22,7 +22,7 @@ function main(){
 }
 ```
 
-```
+```python
 traceCount.TraceCount.trace ( 35 )
 - (_Example.Example_Fields_:main:9) show 10 times: 0
 traceCount.TraceCount.trace ( 35 )
