@@ -1,5 +1,5 @@
 # TraceCount
-Allows a particular trace statement to output only a limited number of times, this is useful to  help with debugging when you want to avoid swapping your browser with traces when the statement is within a loop, or when a tracing over a large number of elements. Tracing out a limited number of values is often enough without the browser getting into a blocked wait situation, as tracing is heavy.
+Allows a particular trace statement to output only a limited number of times, this is useful to  help with debugging when you want to avoid swamping your browser with traces when the statement is within a loop, or when a tracing over a large number of elements. Tracing out a limited number of values is often enough without the browser getting into a blocked wait situation, as tracing is heavy.
 
 ## Example use
 This example uses htmlHelper to trace the example to the screen, but **DivertTrace** is not need.
