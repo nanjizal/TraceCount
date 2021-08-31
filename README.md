@@ -4,7 +4,7 @@ Allows a particular trace statement to output only a limited number of times, th
 ## Example use
 This example uses htmlHelper to trace the example to the screen, but **DivertTrace** is not need.
 
-[TraceCount live example>](https://nanjizal.github.io/TraceCount/example.html)
+[TraceCount live example >](https://nanjizal.github.io/TraceCount/example.html)
 
 Example.hx
 ```haxe
